@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 38% 96%; /* #f1f4f9 - Bright Steel Blue */
+    --foreground: 223 80% 12%; /* #000F5A - Deep Corporate Navy */
+
+    --card: 216 38% 96%;
+    --card-foreground: 223 80% 12%;
+
+    --popover: 216 38% 96%;
+    --popover-foreground: 223 80% 12%;
+
+    --primary: 223 80% 15%; /* #000f3a - Royal Navy */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 30% 92%; /* #e2e8f0 - Light Steel */
+    --secondary-foreground: 223 80% 12%;
+
+    --muted: 214 20% 94%;
+    --muted-foreground: 223 20% 40%;
+
+    --accent: 217 91% 60%; /* #3b82f6 - Royal Blue Accent */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 30% 88%; /* Soft slate gray-blue border */
+    --input: 217 30% 88%;
+    --ring: 217 91% 60%;
+
+    --radius: 1.5rem;
+
+    /* Custom luxury tokens */
+    --luxury-cream: 216 38% 96%;
+    --luxury-black: 223 80% 12%;
+    --luxury-gold: 217 91% 60%;
+    --luxury-green: 214 30% 92%;
+    --luxury-white: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(241, 244, 249, 0.98) 100%);
+    --gradient-card: linear-gradient(180deg, transparent 0%, rgba(241, 244, 249, 0.98) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px rgba(0, 15, 90, 0.06);
+    --shadow-card: 0 4px 20px -4px rgba(0, 15, 90, 0.04);
+
+    --sidebar-background: 216 38% 96%;
+    --sidebar-foreground: 223 80% 12%;
+    --sidebar-primary: 223 80% 15%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 214 30% 92%;
+    --sidebar-accent-foreground: 223 80% 12%;
+    --sidebar-border: 217 30% 88%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    /* Mapped to same light variables to enforce the executive bright layout consistently */
+    --background: 216 38% 96%;
+    --foreground: 223 80% 12%;
+
+    --card: 216 38% 96%;
+    --card-foreground: 223 80% 12%;
+
+    --popover: 216 38% 96%;
+    --popover-foreground: 223 80% 12%;
+
+    --primary: 223 80% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 30% 92%;
+    --secondary-foreground: 223 80% 12%;
+
+    --muted: 214 20% 94%;
+    --muted-foreground: 223 20% 40%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 30% 88%;
+    --input: 217 30% 88%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 216 38% 96%;
+    --sidebar-foreground: 223 80% 12%;
+    --sidebar-primary: 223 80% 15%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 214 30% 92%;
+    --sidebar-accent-foreground: 223 80% 12%;
+    --sidebar-border: 217 30% 88%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(30, 58, 138, 0.05) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(148, 163, 184, 0.03) 0%, transparent 60%),
+      linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .typing-cursor::after {
+    content: '|';
+    animation: blink 0.8s infinite;
+    color: hsl(var(--primary));
+    margin-left: 2px;
+    font-weight: 300;
+  }
+}
+
+@layer components {
+  .luxury-container {
+    @apply max-w-[90rem] mx-auto px-6 md:px-12;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Reveal animations */
+  .reveal-up {
+    @apply opacity-0 translate-y-[60px] transition-all duration-[1200ms];
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  .reveal-active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Line reveal */
+  .line-reveal {
+    @apply w-0 transition-all duration-[1500ms];
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .line-reveal.active {
+    @apply w-full;
+  }
+
+  /* Mask reveal */
+  .mask-overlay {
+    @apply absolute inset-0 bg-background z-[2] transition-transform duration-[1200ms];
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    transform-origin: bottom;
+  }
+
+  .mask-reveal .mask-overlay {
+    transform: translateY(-100%);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-500;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+  }
+
+  .image-zoom {
+    @apply transition-transform;
+    transition-duration: 1500ms;
+  }
+
+  .group:hover .image-zoom {
+    @apply scale-105;
+  }
+
+  /* Regia Reveal Animations for Immersive Layout */
+  .regia-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1), transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  .regia-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
