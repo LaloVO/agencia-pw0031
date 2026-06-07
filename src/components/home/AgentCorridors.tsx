@@ -22,7 +22,7 @@ const CORRIDOR_STATS = [
   }
 ];
 
-const RegiaCorridors = () => {
+const AgentCorridors = () => {
   return (
     <section className="relative py-32 px-6 md:px-12 overflow-hidden bg-transparent">
       {/* Subtle background glow */}
@@ -49,7 +49,7 @@ const RegiaCorridors = () => {
           <div className="lg:col-span-7 space-y-6 lg:pt-4">
             <Reveal delay={150}>
               <p className="font-sans font-medium text-slate-700 text-lg leading-relaxed">
-                En <strong className="text-[#000F5A]">Regia Inmobiliaria</strong> entendemos la velocidad de los mercados industriales y comerciales. Especialistas en lotes, bodegas y naves de servicio en los corredores más estratégicos del país, brindamos el soporte de infraestructura que tu negocio requiere.
+                En <strong className="text-[#000F5A]">Agencia</strong> entendemos la velocidad de los mercados industriales y comerciales. Especialistas en lotes, bodegas y naves de servicio en los corredores más estratégicos del país, brindamos el soporte de infraestructura que tu negocio requiere.
               </p>
               <p className="font-sans text-slate-500 text-sm md:text-base leading-relaxed mt-4">
                 Desde el corredor Saltillo - Ramos Arizpe hasta las zonas logísticas clave de Nuevo León, seleccionamos ubicaciones privilegiadas con conectividad directa a las principales carreteras, garantizando accesibilidad y un flujo de demanda constante.
@@ -92,4 +92,4 @@ const RegiaCorridors = () => {
   );
 };
 
-export default RegiaCorridors;
+export default AgentCorridors;

@@ -2,7 +2,7 @@ import { useSiteUser } from '@/hooks/useSiteUser';
 import { Award, Clock, MapPin, MessageSquare, Mail, Sparkles } from 'lucide-react';
 import Reveal from './Reveal';
 
-const RegiaProfile = () => {
+const AgentProfile = () => {
   const { user } = useSiteUser();
 
   const whatsappUrl = user?.telefono_usuario
@@ -36,7 +36,7 @@ const RegiaProfile = () => {
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-sans font-extrabold text-2xl text-[#000F5A]">
-                      {user?.nombre_usuario ?? 'Regia Inmobiliaria'}
+                      {user?.nombre_usuario ?? 'Agencia'}
                     </h3>
                     <p className="font-sans text-xs text-[#3B82F6] font-bold tracking-widest uppercase mt-1">
                       Especialista Industrial y Comercial
@@ -159,4 +159,4 @@ const RegiaProfile = () => {
   );
 };
 
-export default RegiaProfile;
+export default AgentProfile;

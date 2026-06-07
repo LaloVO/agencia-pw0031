@@ -10,7 +10,7 @@ export default function SolicitaInmueble() {
   return (
     <>
       <Helmet>
-        <title>Búsqueda Inteligente | Regia Inmobiliaria</title>
+        <title>Búsqueda Inteligente | Agencia</title>
         <meta
           name="description"
           content="Completa nuestra solicitud en 6 pasos y recibe opciones personalizadas de lotes industriales, bodegas y locales comerciales."

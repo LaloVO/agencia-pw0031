@@ -43,7 +43,7 @@ const Navbar = () => {
               R
             </div>
             <span className="font-sans font-extrabold text-xl md:text-2xl tracking-wider text-[#000F5A]">
-              {site?.site_name?.toUpperCase().replace('-CBF', '').replace(' REGIA', '') ?? 'REGIA'}
+              {site?.site_name?.toUpperCase() ?? 'AGENCIA'}
               <span className="text-[#3B82F6] font-medium tracking-normal text-[10px] ml-1 bg-[#3B82F6]/5 border border-[#3B82F6]/15 px-1.5 py-0.5 rounded">
                 INMOBILIARIA
               </span>
@@ -106,7 +106,7 @@ const Navbar = () => {
         <div className="space-y-8 mt-16">
           <div className="border-b border-slate-100 pb-6">
             <span className="font-sans font-extrabold text-xl tracking-wider text-[#000F5A]">
-              REGIA <span className="text-[#3B82F6]">INMOBILIARIA</span>
+              AGENCIA
             </span>
           </div>
 

@@ -11,7 +11,7 @@ const SkeletonCard = () => (
   </div>
 );
 
-const RegiaProperties = () => {
+const AgentProperties = () => {
   const { properties, isLoading } = useProperties({ limit: 6 });
 
   return (
@@ -67,4 +67,4 @@ const RegiaProperties = () => {
   );
 };
 
-export default RegiaProperties;
+export default AgentProperties;

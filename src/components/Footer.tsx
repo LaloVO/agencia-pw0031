@@ -24,7 +24,7 @@ const Footer = () => {
                 R
               </div>
               <span className="font-sans font-extrabold text-xl tracking-wider text-white">
-                REGIA <span className="text-[#3B82F6]">INMOBILIARIA</span>
+                AGENCIA
               </span>
             </Link>
             <p className="font-sans text-xs md:text-sm text-slate-400 max-w-sm leading-relaxed uppercase tracking-wider font-medium">
@@ -74,7 +74,7 @@ const Footer = () => {
 
         {/* Bottom Legal */}
         <div className="mt-20 pt-8 border-t border-white/5 text-[9px] text-slate-500 font-bold uppercase tracking-widest flex flex-col sm:flex-row justify-between gap-4">
-          <span>© {currentYear} REGIA INMOBILIARIA. TODOS LOS DERECHOS RESERVADOS.</span>
+          <span>© {currentYear} AGENCIA. TODOS LOS DERECHOS RESERVADOS.</span>
           <div className="flex gap-6">
             <span>SITIO SATÉLITE PREMIUM</span>
             <span>POWERED BY CBF CONNECT</span>

@@ -68,7 +68,7 @@ const PropertyDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{property.nombre} | {user?.nombre_usuario ?? 'Regia Inmobiliaria'}</title>
+        <title>{property.nombre} | {user?.nombre_usuario ?? 'Agencia'}</title>
         <meta name="description" content={property.descripcion ?? property.nombre} />
       </Helmet>
 

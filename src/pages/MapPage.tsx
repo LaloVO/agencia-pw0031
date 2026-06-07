@@ -222,7 +222,7 @@ const MapPage = () => {
   return (
     <>
       <Helmet>
-        <title>Regia Inmobiliaria | Mapa de Propiedades</title>
+        <title>Agencia | Mapa de Propiedades</title>
         <meta
           name="description"
           content="Explora nuestro inventario de lotes industriales, bodegas y locales comerciales en el mapa interactivo."

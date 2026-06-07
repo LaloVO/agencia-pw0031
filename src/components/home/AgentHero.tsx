@@ -42,7 +42,7 @@ export const TypingText = () => {
   return <span className="typing-cursor text-[#3B82F6]">{text}</span>;
 };
 
-const RegiaHero = () => {
+const AgentHero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [query, setQuery] = useState('');
   const [action, setAction] = useState('1'); // '1' = Venta, '2' = Renta
@@ -275,4 +275,4 @@ const RegiaHero = () => {
   );
 };
 
-export default RegiaHero;
+export default AgentHero;
